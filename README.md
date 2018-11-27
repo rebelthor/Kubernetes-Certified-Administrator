@@ -55,8 +55,8 @@ spec:
 * [Know where to get the Kubernetes release binaries](https://kubernetes.io/docs/getting-started-guides/binary_release/#prebuilt-binary-release)
 * [Provision underlying infrastructure to deploy a Kubernetes cluster](https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/f9486b081f8f54dd63a891463f0b0e783d084307/docs/01-infrastructure-gcp.md)
 * [Choose a network solution](https://kubernetes.io/docs/getting-started-guides/scratch/#network)
-* [Choose your Kubernetes infrastructure configuration] - ????????
-* [Run end-to-end tests on your cluster] - ????????
+* [Choose your Kubernetes infrastructure configuration](https://kubernetes.io/docs/setup/pick-right-solution/)
+* [Run end-to-end tests on your cluster] -
   * Some simple commands will cover most cases:
 ```
 $ kubectl cluster-info
@@ -69,7 +69,8 @@ $ kubectl get svc  -o wide --show-labels --all-namespaces
      * [End-To-End Testing in Kubernetes](https://github.com/kubernetes/community/blob/master/contributors/devel/e2e-tests.md)
      * [Using CNCF k8s conformance](https://github.com/cncf/k8s-conformance/blob/master/instructions.md)
      * [Heptio Sonobuoy Scanner](https://scanner.heptio.com/)
-* [Analyse end-to-end test results] - ????????
+     * [Juju-deployed Kubernetes cluster E2E testing](https://kubernetes.io/docs/getting-started-guides/ubuntu/validation/)
+* [Analyse end-to-end test results]
 * [Run Node end-to-end tests] - ??????
 
 ### Security 12%
@@ -78,18 +79,21 @@ $ kubectl get svc  -o wide --show-labels --all-namespaces
 * [Know how to configure authentication and authorization](https://kubernetes.io/docs/admin/authorization/rbac/)
   * [Access the api](https://kubernetes.io/docs/admin/accessing-the-api/)
   * [Authentication](https://kubernetes.io/docs/reference/access-authn-authz/authentication/)
+    * [Kubernetes auth: X509 client certificates](https://brancz.com/2017/10/16/kubernetes-auth-x509-client-certificates/)
+    * [Manage TLS Certificates for kubernetes users](https://jenciso.github.io/personal/manage-tls-certificates-for-kubernetes-users)
   * [Authorization with RBAC](https://kubernetes.io/docs/admin/authorization/rbac/)
   * [Admission Control](https://kubernetes.io/docs/admin/admission-controllers/)
 * [Understand Kubernetes security primitives]
   * [Pod Security Policy](https://kubernetes.io/docs/concepts/policy/pod-security-policy/)
     * [PSP and RBAC](https://github.com/kubernetes/examples/blob/master/staging/podsecuritypolicy/rbac/README.md)
+    * [Secure A Kubernetes Cluster With Pod Security Policies](https://docs.bitnami.com/kubernetes/how-to/secure-kubernetes-cluster-psp/)
 * [Know to configure network policies](https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/)
   * [Blog: Kubernetes network policy](https://ahmet.im/blog/kubernetes-network-policy/)
   * [Katacoda Calico](https://www.katacoda.com/projectcalico/scenarios/calico)
   * [Video] https://www.youtube.com/watch?v=3gGpMmYeEO8
   * [Exercises] https://github.com/ahmetb/kubernetes-network-policy-recipes
 * [Create and manage TLS certificates for cluster components](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
-* [Work with images securely] - ???????
+* [Work with images securely](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)
 * [Define security contexts](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
 * [Secure persistent key value store](https://kubernetes.io/docs/concepts/configuration/secret/)
 * Work with role-based access control
@@ -153,6 +157,8 @@ $ kubectl get svc  -o wide --show-labels --all-namespaces
   $kubectl describe pods <POD NAME UNDER Investigation>  | grep -A7 ^Events
 ```
 * [Know how to configure the Kubernetes scheduler](https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/)
+  * [Herding pods: taints, tolerations and affinity in kubernetes](https://medium.com/@betz.mark/herding-pods-taints-tolerations-and-affinity-in-kubernetes-2279cef1f982)
+  * [How to write a custom Kubernetes scheduler using your monitoring metrics](https://sysdig.com/blog/kubernetes-scheduler/)
 
 ### [Logging/Monitoring](https://kubernetes.io/docs/concepts/cluster-administration/logging/) 5%
 * [Monitoring Kubernetes](https://www.datadoghq.com/blog/monitoring-kubernetes-era/)
