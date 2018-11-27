@@ -10,7 +10,7 @@ Ensure you have the right version of Kubernetes documentation selected (e.g. v1.
 
 ## Exam Objectives
 
-These are the exam objectives you review and understand in order to pass the test. The objectives are current as of December 12, 2017.
+These are the exam objectives you review and understand in order to pass the test. The objectives are current as of November 27, 2018.
 
 * [CNCF Exam Curriculum repository ](https://github.com/cncf/curriculum)
 
