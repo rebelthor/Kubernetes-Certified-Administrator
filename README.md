@@ -48,15 +48,15 @@ spec:
         - containerPort: 80
 ```
 ### [Installation, Configuration and Validation](https://github.com/kelseyhightower/kubernetes-the-hard-way/tree/f9486b081f8f54dd63a891463f0b0e783d084307) 12%
-* Design a Kubernetes cluster
+* [Design a Kubernetes cluster] - ???????
 * [Install Kubernetes masters and nodes, including the use of TLS bootstrapping](https://kubernetes.io/docs/getting-started-guides/scratch/)
 * [Configure secure cluster communications](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
 * [Configure a Highly-Available Kubernetes cluster](https://kubernetes.io/docs/admin/high-availability/)
 * [Know where to get the Kubernetes release binaries](https://kubernetes.io/docs/getting-started-guides/binary_release/#prebuilt-binary-release)
 * [Provision underlying infrastructure to deploy a Kubernetes cluster](https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/f9486b081f8f54dd63a891463f0b0e783d084307/docs/01-infrastructure-gcp.md)
 * [Choose a network solution](https://kubernetes.io/docs/getting-started-guides/scratch/#network)
-* Choose your Kubernetes infrastructure configuration
-* Run end-to-end tests on your cluster    
+* [Choose your Kubernetes infrastructure configuration] - ????????
+* [Run end-to-end tests on your cluster] - ????????
   * Some simple commands will cover most cases:
 ```
 $ kubectl cluster-info
@@ -65,11 +65,12 @@ $ kubectl get componentstatuses
 $ kubectl get pods -o wide --show-labels --all-namespaces
 $ kubectl get svc  -o wide --show-labels --all-namespaces
 ```
-
-* For more advanced end to end testing, which may not be covered on the exam, also see:
+  * For more advanced end to end testing, which may not be covered on the exam, also see:
      * [End-To-End Testing in Kubernetes](https://github.com/kubernetes/community/blob/master/contributors/devel/e2e-tests.md)
      * [Using CNCF k8s conformance](https://github.com/cncf/k8s-conformance/blob/master/instructions.md)
      * [Heptio Sonobuoy Scanner](https://scanner.heptio.com/)
+* [Analyse end-to-end test results] - ????????
+* [Run Node end-to-end tests] - ??????
 
 ### Security 12%
 * [Securing a kubernetes cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
@@ -85,19 +86,21 @@ $ kubectl get svc  -o wide --show-labels --all-namespaces
 * [Know to configure network policies](https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/)
   * [Blog: Kubernetes network policy](https://ahmet.im/blog/kubernetes-network-policy/)
   * [Katacoda Calico](https://www.katacoda.com/projectcalico/scenarios/calico)
+  * [Video] https://www.youtube.com/watch?v=3gGpMmYeEO8
+  * [Exercises] https://github.com/ahmetb/kubernetes-network-policy-recipes
 * [Create and manage TLS certificates for cluster components](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
-* Work with images securely
+* [Work with images securely] - ???????
 * [Define security contexts](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
 * [Secure persistent key value store](https://kubernetes.io/docs/concepts/configuration/secret/)
 * Work with role-based access control
 
 ### [Networking](https://kubernetes.io/docs/concepts/cluster-administration/networking/) 11%
 * [Understand the networking configuration on the cluster nodes](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
-* Understand Pod networking concepts
+* [Understand Pod networking concepts]
   * youtube: [The ins and outs of networking in Google Container Engine and Kubernetes (Google Cloud Next '17)](https://www.youtube.com/watch?v=y2bhV81MfKQ)
   * youtube: [Networking with Kubernetes](https://www.youtube.com/watch?v=WwQ62OyCNz4)
   * [Illustrated Guide To Kubernetes Networking by Tim Hockin](https://speakerdeck.com/thockin/illustrated-guide-to-kubernetes-networking)
-* Understand service networking
+* [Understand service networking]
   * youtube: [Life of a Packet [I] - Michael Rubin, Google](https://www.youtube.com/watch?v=0Omvgd7Hg1I)
 * [Deploy and configure network load balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)
 * [Know how to use Ingress rules](https://kubernetes.io/docs/concepts/services-networking/ingress/)
@@ -121,7 +124,7 @@ $ kubectl get svc  -o wide --show-labels --all-namespaces
   * youtube [Kubernetes Day 2: Cluster Operations [I] - Brandon Philips, CoreOS](https://www.youtube.com/watch?v=U1zR0eDQRYQ)
   * Safaribooksonline: [https://www.safaribooksonline.com/library/view/oscon-2016-video/9781491965153/video246982.html](https://www.safaribooksonline.com/library/view/oscon-2016-video/9781491965153/video246982.html)
 * [Troubleshoot worker node failure](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/)
-* Troubleshoot networking
+* [Troubleshoot networking] - ????????
 
 ### [Storage](https://kubernetes.io/docs/concepts/storage/volumes/) 7%
 * [Understand persistent volumes and know how to create them](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
@@ -134,7 +137,7 @@ $ kubectl get svc  -o wide --show-labels --all-namespaces
 * [Understand Deployments and how to perform rolling updates and rollbacks](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 * [Know various ways to configure applications](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
 * [Know how to scale applications](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#scaling-your-application)
-* Understand the primitives necessary to create a self-healing application
+* [Understand the primitives necessary to create a self-healing application] - ???????
 
 ### Scheduling 5%
 * [Use label selectors to schedule Pods](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
@@ -154,6 +157,7 @@ $ kubectl get svc  -o wide --show-labels --all-namespaces
 ### [Logging/Monitoring](https://kubernetes.io/docs/concepts/cluster-administration/logging/) 5%
 * [Monitoring Kubernetes](https://www.datadoghq.com/blog/monitoring-kubernetes-era/)
 * [Understand how to monitor all cluster components](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/)
+* [Understand how to monitor applications] ??????
 * [Pod and Node metrics](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#interacting-with-running-pods)
 * Understand how to monitor applications
 * [Manage cluster component logs](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/#looking-at-logs)
